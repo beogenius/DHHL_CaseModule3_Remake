@@ -6,8 +6,8 @@ controller/SearchProductsByPriceHomepage.java
  controller.SearchProductsByPriceHomepage
 controller/ShowProductDetails.java
  controller.ShowProductDetails
-controller/BackToAdminPage.java
- controller.BackToAdminPage
+dao/impl/IUserDaoImpl.java
+ dao.impl.IUserDaoImpl
 controller/BackToHomePage.java
  controller.BackToHomePage
 controller/ShowEditForm.java
@@ -16,8 +16,8 @@ controller/ShowPurchaseHistory.java
  controller.ShowPurchaseHistory
 controller/CreateBuyer.java
  controller.CreateBuyer
-controller/HomeServlet.java
- controller.HomeServlet
+dao/impl/IProductDaoImpl.java
+ dao.impl.IProductDaoImpl
 controller/ShowProductDetailsHomepage.java
  controller.ShowProductDetailsHomepage
 controller/BackToBuyerPage.java
@@ -42,8 +42,8 @@ controller/SearchProductByName.java
  controller.SearchProductByName
 controller/ShowShopList.java
  controller.ShowShopList
-model/Shop.java
- model.Shop
+jdbc/JDBCConnection.java
+ jdbc.JDBCConnection
 dao/IUserDao.java
  dao.IUserDao
 controller/SearchProductsByNameHomepage.java
@@ -56,23 +56,23 @@ controller/BackToShopPage.java
  controller.BackToShopPage
 controller/CreateShop.java
  controller.CreateShop
-model/Product.java
- model.Product
+dao/impl/IPurchaseDaoImpl.java
+ dao.impl.IPurchaseDaoImpl
 controller/ShowRegisterForm.java
  controller.ShowRegisterForm
-controller/SearchProductsByPrice.java
- controller.SearchProductsByPrice
+dao/impl/IShopDaoImpl.java
+ dao.impl.IShopDaoImpl
 dao/IPurchaseDao.java
  dao.IPurchaseDao
 controller/ShowDeleteForm.java
  controller.ShowDeleteForm
-dao/impl/IShopDaoImpl.java
- dao.impl.IShopDaoImpl
-jdbc/JDBCConnection.java
- jdbc.JDBCConnection
-dao/impl/IUserDaoImpl.java
- dao.impl.IUserDaoImpl
-dao/impl/IProductDaoImpl.java
- dao.impl.IProductDaoImpl
-dao/impl/IPurchaseDaoImpl.java
- dao.impl.IPurchaseDaoImpl
+model/Product.java
+ model.Product
+controller/HomeServlet.java
+ controller.HomeServlet
+controller/BackToAdminPage.java
+ controller.BackToAdminPage
+model/Shop.java
+ model.Shop
+controller/SearchProductsByPrice.java
+ controller.SearchProductsByPrice
