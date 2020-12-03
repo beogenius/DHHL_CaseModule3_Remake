@@ -19,7 +19,9 @@ public class IUserDaoImpl implements IUserDao {
     private static final String FIND_BUYER_BY_ID = "select * from users where userRole = 'buyer' and userID = ?";
     private static final String CREATE_ACCOUNT = "INSERT INTO users ( userEmail, userPass, userRole, phoneNumber,userName) VALUE (?,?,?,?,?)";
     private static final String FIND_BUYER_BY_EMAIL = "select * from users where userRole = 'buyer' and userEmail = ?";
+    String deleteUserSql = "delete from users where userId=?;";
 
+    private static final String UPDATE_USER = "update users set userName = ?, userEmail = ?, userPass = ?, phoneNumber = ?, userRole=? where userId = ?";
     @Override
     public List<User> listUser() {
         List<User> users = null;
@@ -145,5 +147,32 @@ public class IUserDaoImpl implements IUserDao {
             throwables.printStackTrace();
         }
         return buyer;
+    }
+
+    @Override
+    public void updateUser(User updatedUser) {
+        try {
+            PreparedStatement ps = connection.prepareStatement(UPDATE_USER);
+            ps.setString(1, updatedUser.getUserName());
+            ps.setString(2, updatedUser.getUserEmail());
+            ps.setString(3, updatedUser.getUserPass());
+            ps.setString(4, updatedUser.getPhoneNumber());
+            ps.setString(5, updatedUser.getUserRole());
+            ps.setInt(6,updatedUser.getUserID());
+            ps.executeUpdate();
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
+    }
+
+    @Override
+    public void deleteUser(int id){
+        try {
+            PreparedStatement psUser = connection.prepareStatement(deleteUserSql);
+            psUser.setInt(1,id);
+            psUser.executeUpdate();
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
     }
 }

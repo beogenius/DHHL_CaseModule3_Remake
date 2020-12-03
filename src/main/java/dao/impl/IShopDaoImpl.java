@@ -32,6 +32,7 @@ public class IShopDaoImpl implements IShopDao {
     private static final String CREATE_SHOP = "insert into shop(shopName,shopEmail,shopPass,address) values(?,?,?,?)";
 
     private static final String FIND_SHOP_BY_EMAIL = "select * from shop where shopEmail = ?";
+    String deleteShopSql = "delete from shop where shopID=?;";
     @Override
     public List<Shop> listShop() {
         List<Shop> shops = null;
@@ -227,5 +228,16 @@ public class IShopDaoImpl implements IShopDao {
             throwables.printStackTrace();
         }
         return shop;
+    }
+
+    @Override
+    public void deleteShop(int id){
+        try {
+            PreparedStatement psShop = connection.prepareStatement(deleteShopSql);
+            psShop.setInt(1,id);
+            psShop.executeUpdate();
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
     }
 }

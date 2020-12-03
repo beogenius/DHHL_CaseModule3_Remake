@@ -65,7 +65,7 @@
                 <!-- LOGO -->
                 <div class="col-md-2">
                     <div class="header-logo">
-                        <a href="/back-to-buyer-page" class="logo">
+                        <a href="/back-to-home-page" class="logo">
                             <img src="img/shopee.jpg" alt="" width="100px">
                         </a>
                     </div>

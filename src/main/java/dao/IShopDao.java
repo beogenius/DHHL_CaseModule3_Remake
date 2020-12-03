@@ -26,4 +26,5 @@ public interface IShopDao {
     void CreateShop(Shop shop);
 
     Shop findShopByEmail(String shopEmail);
+    public void deleteShop(int id);
 }

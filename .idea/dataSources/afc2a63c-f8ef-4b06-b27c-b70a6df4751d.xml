@@ -1363,7 +1363,7 @@ checkNumber</ColNames>
       <Position>8</Position>
       <DataType>int|0s</DataType>
     </column>
-    <index id="391" parent="298" name="shopID">
+    <index id="391" parent="298" name="products_ibfk_1">
       <ColNames>shopID</ColNames>
       <Type>btree</Type>
     </index>
@@ -1376,6 +1376,7 @@ checkNumber</ColNames>
       <ColNames>shopID</ColNames>
       <RefTableName>shop</RefTableName>
       <RefColNames>shopID</RefColNames>
+      <OnDelete>cascade</OnDelete>
     </foreign-key>
     <column id="394" parent="299" name="purchaseId">
       <Position>1</Position>
@@ -1416,11 +1417,13 @@ checkNumber</ColNames>
       <ColNames>productId</ColNames>
       <RefTableName>products</RefTableName>
       <RefColNames>productID</RefColNames>
+      <OnDelete>cascade</OnDelete>
     </foreign-key>
     <foreign-key id="403" parent="299" name="key3">
       <ColNames>userId</ColNames>
       <RefTableName>users</RefTableName>
       <RefColNames>userId</RefColNames>
+      <OnDelete>cascade</OnDelete>
     </foreign-key>
     <column id="404" parent="300" name="shopID">
       <Position>1</Position>

@@ -1,10 +1,6 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: adminn
-  Date: 11/5/2020
-  Time: 4:33 PM
-  To change this template use File | Settings | File Templates.
---%>
+
+<%--thay ảnh nền và font--%>
+
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html lang="en">
@@ -52,9 +48,11 @@
     @import url(https://fonts.googleapis.com/css?family=Roboto:300);
 
     .login-page {
+
         width: 360px;
         padding: 8% 0 0;
-        margin: auto;
+        margin: 7px 150px;
+
     }
 
     .form {
@@ -164,17 +162,22 @@
         font-family: "Roboto", sans-serif;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
+        background-image: url("view/images/anhnendangky.png");
+        background-size: cover;
     }
 </style>
 <div class="login-page">
     <div class="form">
+        <span style="font-size: large">
+            Account Create
+        </span>
         <form class="login-form" action="/create-buyer">
             <input type="email" placeholder="userEmail" name="userEmail" required/>
             <input type="password" minlength="6" placeholder="userPass" name="userPass" required/>
             <input type="number" minlength="6" placeholder="phoneNumber" name="phoneNumber" required/>
             <input type="text" placeholder="userName" name="userName" required/>
 
-            <input type="submit" class="login100-form-btn" value="Create Account">
+            <input type="submit" class="login100-form-btn" value="Create Account" style="background-color: greenyellow" >
             <p class="message">Not registered shop? <a href="#">create shop</a></p>
         </form>
 
@@ -184,7 +187,7 @@
             <input type="password" minlength="6" type="shopPass" name="shopPass" placeholder="Password" required/>
             <input type="text" name="address" placeholder="address" required/>
 
-            <input type="submit" class="login100-form-btn" value="Create Shop">
+            <input type="submit" class="login100-form-btn" value="Create Shop" style="background-color: greenyellow">
             <p class="message">Not registered user? <a href="#">Create an account</a></p>
         </form>
 

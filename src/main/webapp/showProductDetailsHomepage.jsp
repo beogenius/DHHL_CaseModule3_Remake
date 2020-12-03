@@ -423,12 +423,6 @@
                                 <!-- /product -->
 
 
-
-
-
-
-
-
                             </div>
                             <div id="slick-nav-2" class="products-slick-nav"></div>
                         </div>

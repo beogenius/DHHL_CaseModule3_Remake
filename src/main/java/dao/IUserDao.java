@@ -1,5 +1,6 @@
 package dao;
 
+import model.Product;
 import model.User;
 
 import java.util.List;
@@ -16,4 +17,8 @@ public interface IUserDao {
     void saveBuyer(User buyer);
 
     User findBuyerByEmail(String buyerEmail);
+
+    void updateUser(User updatedUser);
+
+    public void deleteUser(int id);
 }

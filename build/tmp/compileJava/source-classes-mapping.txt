@@ -46,6 +46,8 @@ jdbc/JDBCConnection.java
  jdbc.JDBCConnection
 dao/IUserDao.java
  dao.IUserDao
+controller/DeleteShop.java
+ controller.DeleteShop
 controller/SearchProductsByNameHomepage.java
  controller.SearchProductsByNameHomepage
 controller/ShowProductList.java
@@ -66,10 +68,14 @@ dao/IPurchaseDao.java
  dao.IPurchaseDao
 controller/ShowDeleteForm.java
  controller.ShowDeleteForm
+controller/ShowEditBuyerFormAdminPage.java
+ controller.ShowEditBuyerFormAdminPage
 model/Product.java
  model.Product
 controller/HomeServlet.java
  controller.HomeServlet
+controller/DeleteUser.java
+ controller.DeleteUser
 controller/BackToAdminPage.java
  controller.BackToAdminPage
 model/Shop.java
