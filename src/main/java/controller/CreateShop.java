@@ -30,7 +30,7 @@ IProductDao productDao = new IProductDaoImpl();
         shopDao.CreateShop(shop);
 
         Shop newShop = shopDao.findShopByEmail(shopEmail);
-        List<Product> shopProducts = shopDao.list8Products(newShop.getShopID());
+        List<Product> shopProducts = shopDao.listShopProduct(newShop.getShopID());
         request.setAttribute("shopProducts", shopProducts);
         request.setAttribute("shop", newShop);
 

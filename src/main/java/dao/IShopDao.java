@@ -19,8 +19,6 @@ public interface IShopDao {
 
     void saveProduct(Product product);
 
-    List<Product> list8Products(int shopID);
-
     void CreateShop(Shop shop);
 
     Shop findShopByEmail(String shopEmail);

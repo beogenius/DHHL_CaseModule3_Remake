@@ -75,7 +75,7 @@
                 <!-- SEARCH BAR -->
                 <div class="col-md-4">
                     <div class="header-search">
-                        <form action="/search-products-by-name?buyerid=${buyer.getUserID()}">
+                        <form action="/search-products-by-name?buyerid=${buyer.getUserID()}" method="post">
                             <input type="text" name="buyerid" hidden>
                             <input class="input" placeholder="Search by name" name="productName">
                             <input type="submit" class="search-btn" value="Search">

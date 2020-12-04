@@ -25,8 +25,6 @@ public class IShopDaoImpl implements IShopDao {
     private static final String INSERT_PRODUCT =
             "insert into products (shopID, productName, productImage, productPrice, productDescription, shopName, productQuantity) value (?,?,?,?,?,?,?) ";
 
-    private static final String SELECT_8_PRODUCTS = "select * from products join shop s on s.shopID = products.shopID where s.shopID = ? limit 8";
-
     private static final String CREATE_SHOP = "insert into shop(shopName,shopEmail,shopPass,address) values(?,?,?,?)";
 
     private static final String FIND_SHOP_BY_EMAIL = "select * from shop where shopEmail = ?";
@@ -145,33 +143,6 @@ public class IShopDaoImpl implements IShopDao {
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         }
-    }
-
-    @Override
-    public List<Product> list8Products(int shopID) {
-        List<Product> shopProducts = null;
-
-        try {
-            shopProducts = new ArrayList<>();
-            PreparedStatement ps = connection.prepareStatement(SELECT_8_PRODUCTS);
-            ps.setInt(1, shopID);
-            ResultSet rs = ps.executeQuery();
-            while (rs.next()) {
-                int productID = rs.getInt("productID");
-                String productName = rs.getString("productName");
-                String productImage = rs.getString("productImage");
-                double productPrice = rs.getDouble("productPrice");
-                String productDescription = rs.getString("productDescription");
-                String shopName = rs.getString("shopName");
-                int productQuantity = rs.getInt("productQuantity");
-                Product product = new Product(productID, shopID, productName, productImage, productPrice,
-                        productDescription, shopName, productQuantity);
-                shopProducts.add(product);
-            }
-        } catch (SQLException throwables) {
-            throwables.printStackTrace();
-        }
-        return shopProducts;
     }
 
     @Override

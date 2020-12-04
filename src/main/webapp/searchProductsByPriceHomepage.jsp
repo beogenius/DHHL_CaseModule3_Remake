@@ -76,7 +76,7 @@
                 <!-- SEARCH BAR -->
                 <div class="col-md-4">
                     <div class="header-search">
-                        <form action="/search-products-by-name-homepage">
+                        <form action="/search-products-by-name">
                             <input class="input" placeholder="Search by name" name="productName">
                             <button type="submit" class="search-btn">Search</button>
                         </form>

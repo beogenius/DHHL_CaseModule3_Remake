@@ -58,7 +58,7 @@ public class LoginController extends HttpServlet {
         for (Shop shop: shops) {
             if (shop.getShopEmail().equals(email) && shop.getShopPass().equals(pass)) {
                 int shopID = shop.getShopID();
-                List<Product> shopProducts = IShopDao.list8Products(shopID);
+                List<Product> shopProducts = IShopDao.listShopProduct(shopID);
                 request.setAttribute("shop", shop);
                 request.setAttribute("shopProducts", shopProducts);
                 RequestDispatcher requestDispatcher = request.getRequestDispatcher("view/shop/shopPage.jsp");
