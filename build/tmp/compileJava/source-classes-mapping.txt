@@ -40,6 +40,8 @@ controller/ShowBuyerList.java
  controller.ShowBuyerList
 controller/SearchProductByName.java
  controller.SearchProductByName
+controller/ShowEditShopAdminPage.java
+ controller.ShowEditShopAdminPage
 controller/ShowShopList.java
  controller.ShowShopList
 jdbc/JDBCConnection.java

@@ -32,7 +32,10 @@ public class IShopDaoImpl implements IShopDao {
     private static final String CREATE_SHOP = "insert into shop(shopName,shopEmail,shopPass,address) values(?,?,?,?)";
 
     private static final String FIND_SHOP_BY_EMAIL = "select * from shop where shopEmail = ?";
+
+    private static final String UPDATE_SHOP = "update shop set shopName = ?, shopEmail = ?, shopPass = ?, address = ? where shopID = ?";
     String deleteShopSql = "delete from shop where shopID=?;";
+
     @Override
     public List<Shop> listShop() {
         List<Shop> shops = null;
@@ -199,11 +202,11 @@ public class IShopDaoImpl implements IShopDao {
     @Override
     public void CreateShop(Shop shop) {
         try {
-            PreparedStatement  preparedStatement = connection.prepareStatement(CREATE_SHOP);
-            preparedStatement.setString(1,shop.getShopName());
-            preparedStatement.setString(2,shop.getShopEmail());
-            preparedStatement.setString(3,shop.getShopPass());
-            preparedStatement.setString(4,shop.getAddress());
+            PreparedStatement preparedStatement = connection.prepareStatement(CREATE_SHOP);
+            preparedStatement.setString(1, shop.getShopName());
+            preparedStatement.setString(2, shop.getShopEmail());
+            preparedStatement.setString(3, shop.getShopPass());
+            preparedStatement.setString(4, shop.getAddress());
             preparedStatement.executeUpdate();
         } catch (SQLException throwables) {
             throwables.printStackTrace();
@@ -218,11 +221,11 @@ public class IShopDaoImpl implements IShopDao {
             ps.setString(1, shopEmail);
             ResultSet rs = ps.executeQuery();
             while (rs.next()) {
-                 int shopID = rs.getInt("shopID");
-                 String shopName = rs.getString("shopName");
-                 String shopPass = rs.getString("shopPass");
-                 String address = rs.getString("address");
-                shop = new Shop(shopID,shopName,shopEmail,shopPass,address);
+                int shopID = rs.getInt("shopID");
+                String shopName = rs.getString("shopName");
+                String shopPass = rs.getString("shopPass");
+                String address = rs.getString("address");
+                shop = new Shop(shopID, shopName, shopEmail, shopPass, address);
             }
         } catch (SQLException throwables) {
             throwables.printStackTrace();
@@ -231,11 +234,26 @@ public class IShopDaoImpl implements IShopDao {
     }
 
     @Override
-    public void deleteShop(int id){
+    public void deleteShop(int id) {
         try {
             PreparedStatement psShop = connection.prepareStatement(deleteShopSql);
-            psShop.setInt(1,id);
+            psShop.setInt(1, id);
             psShop.executeUpdate();
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
+    }
+
+    @Override
+    public void updateShop(Shop updatedShop) {
+        try {
+            PreparedStatement ps = connection.prepareStatement(UPDATE_SHOP);
+            ps.setString(1, updatedShop.getShopName());
+            ps.setString(2, updatedShop.getShopEmail());
+            ps.setString(3, updatedShop.getShopPass());
+            ps.setString(4, updatedShop.getAddress());
+            ps.setInt(5, updatedShop.getShopID());
+            ps.executeUpdate();
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         }

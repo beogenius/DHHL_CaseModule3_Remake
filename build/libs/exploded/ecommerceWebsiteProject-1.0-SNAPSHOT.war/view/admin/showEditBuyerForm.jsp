@@ -32,16 +32,18 @@
     </div>
 </nav>
 
-<div class="container" style="width: 50%; height: 50%; margin-bottom: 400px">
+<div style="margin-left: 300px; margin-top: 20px; font-size: large">
+    <c:if test="${message != null}">
+        <span style="color: red; font-size: xx-large">${message}</span>
+    </c:if>
+</div>
+
+<div class="container" style="width: 50%; height: 50%; margin: auto">
     <h2>BUYER FORM EDIT</h2>
     <br>
     <div class="card">
-        <div class="container-fliud">
+        <div class="container">
             <div class="row">
-                <div class="preview col-md-6">
-
-
-                </div>
                 <form action="/show-edit-buyer-form?Buyerid=${buyer.getUserID()}" method="post">
 
                     <div class="details col-md-6">
@@ -73,11 +75,7 @@
     </div>
 </div>
 
-<div style="margin-left: 300px; margin-top: 20px; font-size: large">
-    <c:if test="${message != null}">
-        <span style="color: red; font-size: large">${message}</span>
-    </c:if>
-</div>
+
 
 </div>
 </body>

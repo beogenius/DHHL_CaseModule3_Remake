@@ -90,7 +90,7 @@
                                 <td scope="col">${shop.getShopPass()}</td>
                                 <td scope="col">${shop.getAddress()}</td>
                                 <td>
-                                    <a href="/customers?action=edit&id=${customer.getId()}" class="btn btn-info btn-sm">Edit</a>
+                                    <a href="/show-edit-shop-form?ShopID=${shop.getShopID()}" class="btn btn-primary btn-sm">Edit</a>
                                     <a href="/customersShop?action=delete&id=${shop.getShopID()}" class="btn btn-danger btn-sm">Delete</a>
                                 </td>
 
