@@ -235,7 +235,7 @@
                             </div>
                         </li>
                     </ul>
-                    <h2 class="text-uppercase">HOT DEAL</h2>
+                    <h2 class="text-uppercase">SHOP NOW SALE UPTO 69%</h2>
                     <a class="primary-btn cta-btn" href="#">Shop now</a>
                 </div>
             </div>
