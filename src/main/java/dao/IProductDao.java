@@ -16,5 +16,4 @@ public interface IProductDao {
 
     void updateProductQuantity(Product product);
 
-    List<Product> listTopProduct();
 }

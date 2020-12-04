@@ -24,10 +24,6 @@ public class CreateBuyer extends HttpServlet {
 IProductDao productDao = new IProductDaoImpl();
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
-    }
-
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String userEmail = request.getParameter("userEmail");
         String userPass = request.getParameter("userPass");
         String userRole = "buyer";
@@ -39,12 +35,16 @@ IProductDao productDao = new IProductDaoImpl();
         String buyerEmail = buyer.getUserEmail();
         User newUser = userDao.findBuyerByEmail(buyerEmail);
         List<Product> products = productDao.listAllProduct();
-        List<Product> topProducts = productDao.listTopProduct();
+
 
         request.setAttribute("products",products);
-        request.setAttribute("topProducts",topProducts);
+
         request.setAttribute("buyer", newUser);
         RequestDispatcher requestDispatcher = request.getRequestDispatcher("view/buyer/buyerPage.jsp");
         requestDispatcher.forward(request, response);
+    }
+
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
     }
 }

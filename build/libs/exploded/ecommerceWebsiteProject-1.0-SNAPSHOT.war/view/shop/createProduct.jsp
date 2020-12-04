@@ -14,7 +14,7 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
-    <title>Shopee Ecommerce</title>
+    <title>Ecommerce</title>
 
     <!-- Google font -->
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700" rel="stylesheet">
@@ -238,7 +238,7 @@
                 <div class="col-md-2">
                     <div class="header-logo">
                         <a href="/back-to-home-page" class="logo">
-                            <img src="img/shopee.jpg" alt="" width="100px">
+                            <img src="img/amazon.jpg" alt="" width="100px">
                         </a>
                     </div>
                 </div>

@@ -114,14 +114,14 @@
                 </div>
                 <!-- /SEARCH BAR -->
 
-                <!-- ACCOUNT -->
+                <!-- SHOW DOANH THU -->
                 <div class="col-md-3 clearfix">
                     <a href="/show-revenue-form?shopid=${shop.getShopID()}"><input type="submit"
                                                                                    class="btn btn-primary btn-lg"
                                                                                    style="background-color: red"
                                                                                    value="REVENUE"></a>
                 </div>
-                <!-- /ACCOUNT -->
+                <!-- SHOW DOANH THU END -->
             </div>
             <!-- row -->
         </div>
@@ -146,7 +146,8 @@
 
 <c:choose>
     <c:when test="${shopPurchases.size() == 0}">
-        <div><span style="font-size: x-large; color: red; margin-left: 300px;font-weight: bold;">YOUR SHOP HAS NO REVENUE</span></div>
+        <div><span style="font-size: x-large; color: red; margin-left: 300px;font-weight: bold;">YOUR SHOP HAS NO REVENUE</span>
+        </div>
     </c:when>
 
     <c:when test="${shopPurchases.size() > 0}">
@@ -158,11 +159,13 @@
 
                 <div class="input-group mb-3">
                     <span class="input-group-addon">From</span>
-                    <input type="date" class="form-control" placeholder="Start Date" aria-describedby="basic-addon1" name="startDate">
+                    <input type="date" class="form-control" placeholder="Start Date" aria-describedby="basic-addon1"
+                           name="startDate">
                 </div>
                 <div class="input-group mb-3">
                     <span class="input-group-addon">To</span>
-                    <input type="date" class="form-control" placeholder="End Date" aria-describedby="basic-addon1" name="endDate">
+                    <input type="date" class="form-control" placeholder="End Date" aria-describedby="basic-addon1"
+                           name="endDate">
                 </div>
 
 
@@ -171,37 +174,6 @@
         </div>
     </c:when>
 </c:choose>
-
-
-<%--<c:if test="${shopPurchases.size() == 0}">--%>
-<%--    <div><span style="font-size: x-large; color: red; margin-left: 300px;font-weight: bold;">YOUR SHOP HAS NO REVENUE</span></div>--%>
-<%--</c:if>--%>
-
-<%--<c:if test="${shopPurchases.size() > 0}">--%>
-<%--    &lt;%&ndash;hien thi form revenue bat dau&ndash;%&gt;--%>
-<%--    <div class="container">--%>
-<%--        <div class="row"></div>--%>
-<%--        <form action="/show-revenue-form?shopid=${shop.getShopID()}" class="form-revenue" method="post">--%>
-
-<%--            <h2 class="mb-3">Revenue Form</h2>--%>
-
-<%--            <div class="input-group mb-3">--%>
-<%--                <span class="input-group-addon">From</span>--%>
-<%--                <input type="date" class="form-control" placeholder="Start Date" aria-describedby="basic-addon1" name="startDate">--%>
-<%--            </div>--%>
-<%--            <div class="input-group mb-3">--%>
-<%--                <span class="input-group-addon">To</span>--%>
-<%--                <input type="date" class="form-control" placeholder="End Date" aria-describedby="basic-addon1" name="endDate">--%>
-<%--            </div>--%>
-
-
-<%--            <input type="submit" class="btn btn-default" value="SHOW">--%>
-<%--        </form>--%>
-<%--    </div>--%>
-
-<%--    &lt;%&ndash;hien thi form revenue ket thuc&ndash;%&gt;--%>
-<%--</c:if>--%>
-
 
 
 <%--hien thi form revenue bat dau--%>
@@ -213,11 +185,13 @@
 
         <div class="input-group mb-3">
             <span class="input-group-addon">From</span>
-            <input type="date" class="form-control" placeholder="Start Date" aria-describedby="basic-addon1" name="startDate">
+            <input type="date" class="form-control" placeholder="Start Date" aria-describedby="basic-addon1"
+                   name="startDate">
         </div>
         <div class="input-group mb-3">
             <span class="input-group-addon">To</span>
-            <input type="date" class="form-control" placeholder="End Date" aria-describedby="basic-addon1" name="endDate">
+            <input type="date" class="form-control" placeholder="End Date" aria-describedby="basic-addon1"
+                   name="endDate">
         </div>
 
 

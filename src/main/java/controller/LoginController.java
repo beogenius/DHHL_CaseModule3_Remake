@@ -49,8 +49,6 @@ public class LoginController extends HttpServlet {
                     request.setAttribute("buyer", user);
                     List<Product> products = productDao.listAllProduct();
                     request.setAttribute("products", products);
-                    List<Product> topProducts = productDao.listTopProduct();
-                    request.setAttribute("topProducts", topProducts);
                     RequestDispatcher requestDispatcher = request.getRequestDispatcher("view/buyer/buyerPage.jsp");
                     requestDispatcher.forward(request, response);
                 }

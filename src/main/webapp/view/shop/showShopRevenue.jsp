@@ -288,7 +288,7 @@
                 <div class="col-md-2">
                     <div class="header-logo">
                         <a href="/back-to-home-page" class="logo">
-                            <img src="img/shopee.jpg" alt="" width="100px">
+                            <img src="img/amazon.jpg" alt="" width="100px">
                         </a>
                     </div>
                 </div>
@@ -339,7 +339,7 @@
 <!-- /NAVIGATION -->
 
 
-<%--điền revenue ???????????????????????????????????--%>
+<%--điền revenue --%>
 <div class="container">
     <h3 style="text-align: center">YOUR SHOP'S REVENUE</h3>
     <br>
@@ -372,7 +372,7 @@
         </tr>
     </table>
 </div>
-<%--kết thúc revenue???????????????????????????????????????????--%>
+<%--kết thúc DOANH THU--%>
 
 
 <!-- jQuery Plugins -->

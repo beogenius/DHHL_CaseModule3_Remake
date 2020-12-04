@@ -22,10 +22,6 @@ IProductDao productDao = new IProductDaoImpl();
     IShopDao shopDao = new IShopDaoImpl();
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
-    }
-
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String shopName = request.getParameter("shopName");
         String shopEmail = request.getParameter("shopEmail");
         String shopPass = request.getParameter("shopPass");
@@ -38,10 +34,12 @@ IProductDao productDao = new IProductDaoImpl();
         request.setAttribute("shopProducts", shopProducts);
         request.setAttribute("shop", newShop);
 
-        List<Product> topProducts = productDao.listTopProduct();
-        request.setAttribute("topProducts", topProducts);
 
         RequestDispatcher dispatcher = request.getRequestDispatcher("view/shop/shopPage.jsp");
         dispatcher.forward(request,response);
+    }
+
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
     }
 }

@@ -5,7 +5,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Login V16</title>
+    <title>Login</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!--===============================================================================================-->
@@ -20,30 +20,7 @@
     <!--===============================================================================================-->
 </head>
 <body>
-<%--<div class="limiter">--%>
-<%--    <div class="container-login100" style="background-image: url(images/bg-01.jpg');">--%>
-<%--        <div class="wrap-login100 p-t-30 p-b-50">--%>
-<%--            <span class="login100-form-title p-b-41">--%>
-<%--               Account Login--%>
-<%--            </span>--%>
-<%--            <form class="login100-form validate-form p-b-33 p-t-5" method="post" action="/logincontroller">--%>
-<%--                <div class="wrap-input100 validate-input" data-validate = "Enter useremail">--%>
-<%--                    <input class="input100" type="text" name="useremail" placeholder="User email">--%>
-<%--                    <span class="focus-input100" data-placeholder="&#xe82a;"></span>--%>
-<%--                </div>--%>
-<%--                <div class="wrap-input100 validate-input" data-validate="Enter password">--%>
-<%--                    <input class="input100" type="password" name="pass" placeholder="Password">--%>
-<%--                    <span class="focus-input100" data-placeholder="&#xe80f;"></span>--%>
-<%--                </div>--%>
-<%--                <div class="container-login100-form-btn m-t-32">--%>
-<%--                    <button type="submit" class="login100-form-btn">--%>
-<%--                        Login l--%>
-<%--                    </button>--%>
-<%--                </div>--%>
-<%--            </form>--%>
-<%--        </div>--%>
-<%--    </div>--%>
-<%--</div>--%>
+
 <style>
     @import url(https://fonts.googleapis.com/css?family=Roboto:300);
 
@@ -171,7 +148,7 @@
         <span style="font-size: large">
             Account Create
         </span>
-        <form class="login-form" action="/create-buyer">
+        <form class="login-form" action="/create-buyer" method="post">
             <input type="email" placeholder="userEmail" name="userEmail" required/>
             <input type="password" minlength="6" placeholder="userPass" name="userPass" required/>
             <input type="number" minlength="6" placeholder="phoneNumber" name="phoneNumber" required/>
@@ -181,7 +158,7 @@
             <p class="message">Not registered shop? <a href="#">create shop</a></p>
         </form>
 
-        <form class=register-form action="/create-shop">
+        <form class=register-form action="/create-shop" method="post">
             <input type="text" name="shopName" placeholder="shopName" required/>
             <input type="email" name="shopEmail" placeholder="shopEmail" required/>
             <input type="password" minlength="6" type="shopPass" name="shopPass" placeholder="Password" required/>

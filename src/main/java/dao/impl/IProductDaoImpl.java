@@ -15,8 +15,6 @@ public class IProductDaoImpl implements IProductDao {
     private static final String FIND_PRODUCTS_BY_PRICE = "select * from products where productPrice > ? and productPrice <= ?";
     private static final String FIND_PRODUCT_BY_ID = "select * from products where productID = ?";
     private static final String UPDATE_PRODUCT_QUANTITY = "update products set productQuantity = ? where productID = ?";
-    private static final String LIST_TOP_PRODUCT =
-            "select *, SUM(purchaseQuantity) as total from products join purchase p on products.productID = p.productId group by products.productID order by SUM(purchaseQuantity) desc limit 5";
 
     @Override
     public List<Product> listAllProduct() {
@@ -137,29 +135,4 @@ public class IProductDaoImpl implements IProductDao {
         }
     }
 
-    @Override
-    public List<Product> listTopProduct() {
-        List<Product> topProducts = null;
-        try {
-            topProducts = new ArrayList<>();
-            PreparedStatement ps = connection.prepareStatement(LIST_TOP_PRODUCT);
-            ResultSet rs = ps.executeQuery();
-            while (rs.next()) {
-                int productID = rs.getInt("p.productid");
-                int shopID = rs.getInt("shopID");
-                String productName = rs.getString("productName");
-                String productImage = rs.getString("productImage");
-                double productPrice = rs.getDouble("productPrice");
-                String productDescription = rs.getString("productDescription");
-                String shopName = rs.getString("shopName");
-                int productQuantity = rs.getInt("productQuantity");
-                Product product = new Product(productID, shopID, productName, productImage, productPrice,
-                        productDescription, shopName, productQuantity);
-                topProducts.add(product);
-            }
-        } catch (SQLException throwables) {
-            throwables.printStackTrace();
-        }
-        return topProducts;
-    }
 }

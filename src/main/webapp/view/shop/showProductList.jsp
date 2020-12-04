@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
-    <title>Shopee Ecommerce</title>
+    <title>Ecommerce</title>
 
     <!-- Google font -->
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700" rel="stylesheet">
@@ -66,7 +66,7 @@
                 <div class="col-md-2">
                     <div class="header-logo">
                         <a href="/back-to-home-page" class="logo">
-                            <img src="img/shopee.jpg" alt="" width="100px">
+                            <img src="img/amazon.jpg" alt="" width="100px">
                         </a>
                     </div>
                 </div>
@@ -121,7 +121,7 @@
 <%--<div class="section">--%>
 <!-- container -->
 <c:if test="${shopProducts.size() == 0}">
-    <div><span style="margin-left: 300px; color: red; font-weight: bold; font-size: x-large">YOUR SHOP HAS NO PRODUCT!</span></div>
+    <div><span style="margin: auto; color: red; font-weight: bold; font-size: xx-large">YOUR SHOP HAS NO PRODUCT!</span></div>
 </c:if>
 
 
@@ -129,7 +129,7 @@
     <div class="row">
         <c:forEach items="${shopProducts}" var="product">
 
-            <%--            neu san pham co so luong = 0--%>
+            <%--neu san pham co so luong = 0--%>
             <c:if test="${product.getProductQuantity() == 0}">
                 <div class="col-md-3" style="margin-bottom: 50px">
                     <div class="product-item">

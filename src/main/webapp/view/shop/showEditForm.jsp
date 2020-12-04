@@ -238,7 +238,7 @@
                 <div class="col-md-2">
                     <div class="header-logo">
                         <a href="/back-to-home-page" class="logo">
-                            <img src="img/shopee.jpg" alt="" width="100px">
+                            <img src="img/amazon.jpg" alt="" width="100px">
                         </a>
                     </div>
                 </div>
@@ -286,15 +286,13 @@
 <%--điền thông báo ở đây--%>
 <div style="margin-left: 300px; margin-top: 20px; font-size: large" >
     <c:if test="${message != null}">
-        <span style="color: red; font-size: large">${message}</span>
+        <span style="color: red; font-size: xx-large">${message}</span>
     </c:if>
 </div>
-
-
 <%--kết thúc thông báo--%>
 
 
-<%--điền edit form???????????????????????????????????--%>
+<%--điền edit form--%>
 <div class="container" style="width: 50%; height: 50%; margin-bottom: 200px">
     <div class="card">
         <div class="container-fliud">
@@ -334,7 +332,7 @@
         </div>
     </div>
 </div>
-<%--kết thúc edit form????????????????????????????????????????????--%>
+<%--kết thúc edit form--%>
 
 
 <!-- FOOTER -->

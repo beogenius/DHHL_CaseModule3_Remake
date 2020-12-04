@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
-    <title>Electro - HTML Ecommerce Template</title>
+    <title>Ecommerce Web Case Module 3</title>
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -69,7 +69,7 @@
                 <div class="col-md-2">
                     <div class="header-logo">
                         <a href="/back-to-home-page" class="logo">
-                            <img src="img/shopee.jpg" alt="" width="100px">
+                            <img src="img/amazon.jpg" alt="" width="100px">
                         </a>
                     </div>
                 </div>
@@ -144,7 +144,7 @@
         <h3 style="text-align: center">PURCHASE HISTORY</h3>
         <br>
         <div>
-            <span style="font-weight: bold; color: red; margin-left: 300px">YOU BOUGHT NOTHING BEFORE!</span>
+            <span style="font-weight: bold; color: red; margin: auto; font-size: xx-large ">YOU BOUGHT NOTHING BEFORE!</span>
         </div>
     </div>
 </c:if>

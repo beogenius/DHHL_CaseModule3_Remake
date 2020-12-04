@@ -67,7 +67,7 @@
                 <div class="col-md-2">
                     <div class="header-logo">
                         <a href="/back-to-home-page" class="logo">
-                            <img src="img/shopee.jpg" alt="" width="100px">
+                            <img src="img/amazon.jpg" alt="" width="100px">
                         </a>
                     </div>
                 </div>
@@ -175,78 +175,8 @@
 </div>
 <!-- /container -->
 <%--</div>--%>
-<!-- /SECTION -->
-
-<!-- /product -->
 
 
-
-
-<!-- SECTION -->
-<div class="section">
-    <!-- container -->
-    <div class="container">
-        <!-- row -->
-        <div class="row">
-
-            <!-- section title -->
-            <div class="col-md-12">
-                <div class="section-title">
-                    <h3 class="title">Top selling</h3>
-                </div>
-            </div>
-            <!-- /section title -->
-
-            <!-- Products tab & slick -->
-            <div class="col-md-12">
-                <div class="row">
-                    <div class="products-tabs">
-                        <!-- tab -->
-                        <div id="tab2" class="tab-pane fade in active">
-                            <div class="products-slick" data-nav="#slick-nav-2">
-                                <!-- product -->
-                                <!-- product -->
-                                <c:forEach items="${products}" var="product">
-                                    <div class="product">
-                                        <div class="product-img">
-                                            <img src="${product.getProductImage()}" alt="">
-                                        </div>
-                                        <div class="product-body">
-                                            <h3 class="product-name"><a
-                                                    href="thay duong link chi tiêt sp">${product.getProductName()}</a></h3>
-                                            <h4 class="product-price">${product.getProductPrice()}</h4>
-                                        </div>
-                                        <a href="logincontroller">
-                                        <div class="add-to-cart">
-                                            <button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i>BUY NOW
-                                            </button>
-                                        </div>
-                                        </a>
-                                    </div>
-                                </c:forEach>
-                                <!-- /product -->
-
-
-
-
-
-
-
-
-                            </div>
-                            <div id="slick-nav-2" class="products-slick-nav"></div>
-                        </div>
-                        <!-- /tab -->
-                    </div>
-                </div>
-            </div>
-            <!-- /Products tab & slick -->
-        </div>
-        <!-- /row -->
-    </div>
-    <!-- /container -->
-</div>
-<!-- /SECTION -->
 
 <!-- FOOTER -->
 <footer id="footer">

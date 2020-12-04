@@ -23,7 +23,7 @@
             <a class="navbar-brand" href="/back-to-admin-page">Admin Page</a>
         </div>
         <ul class="nav navbar-nav">
-            <li class="active"><a href="/show-buyer-list">Buyer List</a></li>
+            <li><a href="/show-buyer-list">Buyer List</a></li>
             <li><a href="/show-shop-list">Shop List</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
