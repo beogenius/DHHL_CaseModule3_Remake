@@ -188,7 +188,6 @@
                         </div>
                     </div>
                 </c:if>
-                <%--            ket thuc san pham co so luong > 0--%>
             </c:forEach>
         </div>
     </div>

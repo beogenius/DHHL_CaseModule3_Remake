@@ -28,10 +28,10 @@ public class ShowBuyerList extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         List<User> buyers = IUserDao.listBuyer();
         request.setAttribute("buyers", buyers);
-        List<User> buyerLimitList = IUserDao.listBuyerLimit10();
-        request.setAttribute("buyerLimitList", buyerLimitList);
-        List<Shop> shopLimitList = IShopDao.listShopLimit10();
-        request.setAttribute("shopLimitList", shopLimitList);
+        List<User> buyer = IUserDao.listBuyer();
+        request.setAttribute("buyers", buyer);
+        List<Shop> shop = IShopDao.listShop();
+        request.setAttribute("shops", shop);
         RequestDispatcher requestDispatcher = request.getRequestDispatcher("view/admin/showBuyerList.jsp");
         requestDispatcher.forward(request, response);
     }

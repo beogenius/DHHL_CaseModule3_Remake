@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
-    <title>Shopee Ecommerce</title>
+    <title>Ecommerce</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
@@ -90,7 +90,7 @@
                 <div class="col-md-2">
                     <div class="header-logo">
                         <a href="/back-to-home-page" class="logo">
-                            <img src="img/shopee.jpg" alt="" width="100px">
+                            <img src="img/amazon.jpg" alt="" width="100px">
                         </a>
                     </div>
                 </div>
@@ -176,30 +176,6 @@
 </c:choose>
 
 
-<%--hien thi form revenue bat dau--%>
-<div class="container">
-    <div class="row"></div>
-    <form action="/show-revenue-form?shopid=${shop.getShopID()}" class="form-revenue" method="post">
-
-        <h2 class="mb-3">Revenue Form</h2>
-
-        <div class="input-group mb-3">
-            <span class="input-group-addon">From</span>
-            <input type="date" class="form-control" placeholder="Start Date" aria-describedby="basic-addon1"
-                   name="startDate">
-        </div>
-        <div class="input-group mb-3">
-            <span class="input-group-addon">To</span>
-            <input type="date" class="form-control" placeholder="End Date" aria-describedby="basic-addon1"
-                   name="endDate">
-        </div>
-
-
-        <input type="submit" class="btn btn-default" value="SHOW">
-    </form>
-</div>
-
-<%--hien thi form revenue ket thuc--%>
 
 
 <!-- FOOTER -->

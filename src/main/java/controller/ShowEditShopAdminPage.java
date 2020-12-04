@@ -26,7 +26,7 @@ public class ShowEditShopAdminPage extends HttpServlet {
         String address = request.getParameter("shopAddress");
         Shop updatedShop = new Shop(shopID,name,email,pw,address);
         shopDao.updateShop(updatedShop);
-        request.setAttribute("message", "Product was updated successfully");
+        request.setAttribute("message", "Đã cập nhật Shop, Vui lòng quay lại trang Admin Page");
         RequestDispatcher requestDispatcher = request.getRequestDispatcher("view/admin/showEditShopForm.jsp");
         requestDispatcher.forward(request, response);
     }

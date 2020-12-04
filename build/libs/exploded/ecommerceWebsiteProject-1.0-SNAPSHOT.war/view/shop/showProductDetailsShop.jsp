@@ -233,7 +233,7 @@
                 <div class="col-md-2">
                     <div class="header-logo">
                         <a href="/back-to-home-page" class="logo">
-                            <img src="img/shopee.jpg" alt="" width="100px">
+                            <img src="img/amazon.jpg" alt="" width="100px">
                         </a>
                     </div>
                 </div>
@@ -253,7 +253,11 @@
 
                 <!-- ACCOUNT -->
                 <div class="col-md-3 clearfix">
-                    <button type="button" class="btn btn-primary btn-lg" style="background-color: red">REVENUE</button>
+                    <a href="/show-revenue-form?shopid=${shop.getShopID()}"><input type="submit"
+                                                                                   class="btn btn-primary btn-lg"
+                                                                                   style="background-color: red"
+                                                                                   value="REVENUE"></a>
+<%--                    <button type="button" class="btn btn-primary btn-lg" style="background-color: red">REVENUE</button>--%>
                 </div>
                 <!-- /ACCOUNT -->
             </div>

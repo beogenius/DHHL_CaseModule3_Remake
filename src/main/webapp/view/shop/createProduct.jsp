@@ -258,7 +258,10 @@
 
                 <!-- ACCOUNT -->
                 <div class="col-md-3 clearfix">
-                    <button type="button" class="btn btn-primary btn-lg" style="background-color: red">REVENUE</button>
+                    <a href="/show-revenue-form?shopid=${shop.getShopID()}"><input type="submit"
+                                                                                   class="btn btn-primary btn-lg"
+                                                                                   style="background-color: red"
+                                                                                   value="REVENUE"></a>
                 </div>
                 <!-- /ACCOUNT -->
             </div>

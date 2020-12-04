@@ -30,7 +30,7 @@ public class ShowEditBuyerFormAdminPage extends HttpServlet {
         User updatedUser = new User(buyerID,email,pw,role,phone,name);
         userDao.updateUser(updatedUser);
         request.setAttribute("updatedUser", updatedUser);
-        request.setAttribute("message", "Product was updated successfully");
+        request.setAttribute("message", "Đã cập nhật người dùng, Vui lòng quay lại trang Admin Page");
         RequestDispatcher requestDispatcher = request.getRequestDispatcher("view/admin/showEditBuyerForm.jsp");
         requestDispatcher.forward(request, response);
 

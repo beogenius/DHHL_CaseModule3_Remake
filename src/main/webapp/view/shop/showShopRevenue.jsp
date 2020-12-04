@@ -14,7 +14,7 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
-    <title>Shopee Ecommerce</title>
+    <title>Ecommerce</title>
 
     <!-- Google font -->
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700" rel="stylesheet">
@@ -313,7 +313,11 @@
 
                 <!-- ACCOUNT -->
                 <div class="col-md-3 clearfix">
-                    <button type="button" class="btn btn-primary btn-lg" style="background-color: red">REVENUE</button>
+                    <a href="/show-revenue-form?shopid=${shop.getShopID()}"><input type="submit"
+                                                                                   class="btn btn-primary btn-lg"
+                                                                                   style="background-color: red"
+                                                                                   value="REVENUE"></a>
+<%--                    <button type="button" class="btn btn-primary btn-lg" style="background-color: red">REVENUE</button>--%>
                 </div>
                 <!-- /ACCOUNT -->
             </div>

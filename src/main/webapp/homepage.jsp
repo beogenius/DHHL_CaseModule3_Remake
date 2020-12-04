@@ -212,31 +212,31 @@
                     <ul class="hot-deal-countdown">
                         <li>
                             <div>
-                                <h3>02</h3>
+                                <h3>01</h3>
                                 <span>Days</span>
                             </div>
                         </li>
                         <li>
                             <div>
-                                <h3>10</h3>
+                                <h3>5</h3>
                                 <span>Hours</span>
                             </div>
                         </li>
                         <li>
                             <div>
-                                <h3>34</h3>
+                                <h3>32</h3>
                                 <span>Mins</span>
                             </div>
                         </li>
                         <li>
                             <div>
-                                <h3>60</h3>
+                                <h3>55</h3>
                                 <span>Secs</span>
                             </div>
                         </li>
                     </ul>
                     <h2 class="text-uppercase">SHOP NOW SALE UPTO 69%</h2>
-                    <a class="primary-btn cta-btn" href="#">Shop now</a>
+                    <a href="logincontroller" class="primary-btn cta-btn" href="#">Shop now</a>
                 </div>
             </div>
         </div>

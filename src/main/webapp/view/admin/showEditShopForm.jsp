@@ -39,7 +39,7 @@
 </div>
 
 <div class="container" style="width: 50%; height: 50%; margin: auto">
-    <h2>BUYER FORM EDIT</h2>
+    <h2>SHOP FORM EDIT</h2>
     <br>
     <div class="card">
         <div class="container">

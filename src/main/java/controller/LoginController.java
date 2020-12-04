@@ -38,10 +38,10 @@ public class LoginController extends HttpServlet {
             if (user.getUserEmail().equals(email) && user.getUserPass().equals(pass)) {
                 if (user.getUserRole().equals("admin")) {
                     request.setAttribute("admin", user);
-                    List<User> buyerLimitList = IUserDao.listBuyerLimit10();
-                    request.setAttribute("buyerLimitList", buyerLimitList);
-                    List<Shop> shopLimitList = IShopDao.listShopLimit10();
-                    request.setAttribute("shopLimitList", shopLimitList);
+                    List<User> buyer = IUserDao.listBuyer();
+                    request.setAttribute("buyers", buyer);
+                    List<Shop> shop = IShopDao.listShop();
+                    request.setAttribute("shops", shop);
                     RequestDispatcher requestDispatcher = request.getRequestDispatcher("view/admin/adminPage.jsp");
                     requestDispatcher.forward(request, response);
                 }

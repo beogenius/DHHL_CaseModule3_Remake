@@ -4,7 +4,6 @@ import dao.IShopDao;
 import jdbc.JDBCConnection;
 import model.Product;
 import model.Shop;
-import model.User;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -16,7 +15,6 @@ import java.util.List;
 public class IShopDaoImpl implements IShopDao {
     Connection connection = JDBCConnection.getConnection();
     private static final String SELECT_ALL_SHOPS = "select * from shop";
-    private static final String SELECT_ALL_SHOPS_LIMIT_10 = "select * from shop limit 10";
     private static final String SELECT_ALL_SHOP_PRODUCTS =
             "select * from products join shop s on s.shopID = products.shopID where s.shopID = ?";
     private static final String FIND_SHOP_BY_ID = "select * from shop where shopID = ?";
@@ -57,29 +55,6 @@ public class IShopDaoImpl implements IShopDao {
             e.printStackTrace();
         }
         return shops;
-    }
-
-    @Override
-    public List<Shop> listShopLimit10() {
-        List<Shop> shopLimitList = null;
-        try {
-            shopLimitList = new ArrayList<>();
-            PreparedStatement preparedStatement = connection.prepareStatement(SELECT_ALL_SHOPS_LIMIT_10);
-            ResultSet rs = preparedStatement.executeQuery();
-            while (rs.next()) {
-                int shopID = rs.getInt("shopID");
-                String shopName = rs.getString("shopName");
-
-                String shopEmail = rs.getString("shopEmail");
-                String shopPass = rs.getString("shopPass");
-                String address = rs.getString("address");
-                Shop shop = new Shop(shopID, shopName, shopEmail, shopPass, address);
-                shopLimitList.add(shop);
-            }
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-        return shopLimitList;
     }
 
     @Override

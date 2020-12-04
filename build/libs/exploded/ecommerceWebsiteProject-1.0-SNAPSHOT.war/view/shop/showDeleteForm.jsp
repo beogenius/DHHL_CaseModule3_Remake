@@ -186,25 +186,7 @@
         .tooltip-inner {
             padding: 1.3em; }
 
-        /*@-webkit-keyframes opacity {*/
-        /*    0% {*/
-        /*        opacity: 0;*/
-        /*        -webkit-transform: scale(3);*/
-        /*        transform: scale(3); }*/
-        /*    100% {*/
-        /*        opacity: 1;*/
-        /*        -webkit-transform: scale(1);*/
-        /*        transform: scale(1); } }*/
 
-        /*@keyframes opacity {*/
-        /*    0% {*/
-        /*        opacity: 0;*/
-        /*        -webkit-transform: scale(3);*/
-        /*        transform: scale(3); }*/
-        /*    100% {*/
-        /*        opacity: 1;*/
-        /*        -webkit-transform: scale(1);*/
-        /*        transform: scale(1); } }*/
 
         /*# sourceMappingURL=style.css.map */
         body {font-family: Arial, Helvetica, sans-serif;}
@@ -356,7 +338,11 @@
 
                 <!-- ACCOUNT -->
                 <div class="col-md-3 clearfix">
-                    <button type="button" class="btn btn-primary btn-lg" style="background-color: red">REVENUE</button>
+                    <a href="/show-revenue-form?shopid=${shop.getShopID()}"><input type="submit"
+                                                                                   class="btn btn-primary btn-lg"
+                                                                                   style="background-color: red"
+                                                                                   value="REVENUE"></a>
+
                 </div>
                 <!-- /ACCOUNT -->
             </div>

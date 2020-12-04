@@ -34,10 +34,10 @@ public class DeleteUser extends HttpServlet {
 
         IUserDao IUserDao = new IUserDaoImpl();
         IShopDao IShopDao = new IShopDaoImpl();
-        List<User> buyerLimitList = IUserDao.listBuyerLimit10();
-        request.setAttribute("buyerLimitList", buyerLimitList);
-        List<Shop> shopLimitList = IShopDao.listShopLimit10();
-        request.setAttribute("shopLimitList", shopLimitList);
+        List<User> buyer = IUserDao.listBuyer();
+        request.setAttribute("buyers", buyer);
+        List<Shop> shop = IShopDao.listShop();
+        request.setAttribute("shops", shop);
         RequestDispatcher requestDispatcher = request.getRequestDispatcher("view/admin/adminPage.jsp");
         try {
             requestDispatcher.forward(request, response);

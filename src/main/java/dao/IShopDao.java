@@ -9,8 +9,6 @@ public interface IShopDao {
 
     List<Shop> listShop();
 
-    List<Shop> listShopLimit10();
-
     List<Product> listShopProduct(int shopID);
 
     Shop findShopById(int shopID);

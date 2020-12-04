@@ -50,7 +50,7 @@
                             <th>Name</th>
                             <th>Action</th>
                         </tr>
-                        <c:forEach items="${buyerLimitList}" var="buyer">
+                        <c:forEach items="${buyers}" var="buyer">
                             <tr>
                                 <td scope="col">${buyer.getUserID()}</td>
                                 <td scope="col">${buyer.getUserEmail()}</td>
@@ -82,7 +82,7 @@
                             <th>Shop Adress</th>
                             <th>Action</th>
                         </tr>
-                        <c:forEach items="${shopLimitList}" var="shop">
+                        <c:forEach items="${shops}" var="shop">
                             <tr>
                                 <td scope="col">${shop.getShopID()}</td>
                                 <td scope="col">${shop.getShopName()}</td>

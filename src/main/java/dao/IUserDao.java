@@ -10,9 +10,7 @@ public interface IUserDao {
 
      List<User> listBuyer();
 
-     List<User> listBuyerLimit10();
-
-     User findBuyerById(int buyerID);
+    User findBuyerById(int buyerID);
 
     void saveBuyer(User buyer);
 

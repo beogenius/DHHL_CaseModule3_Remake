@@ -131,37 +131,6 @@
 </nav>
 <!-- /NAVIGATION -->
 
-<!-- SECTION -->
-<%--<div class="section">--%>
-<!-- container -->
-
-<%--???????????????????????????????????????????????????????????????????????--%>
-<%--<div class="container">--%>
-<%--    <div class="row">--%>
-<%--        <c:forEach items="${products}" var="product">--%>
-<%--            <div class="col-md-3" style="margin-bottom: 50px">--%>
-<%--                <div class="product-item">--%>
-<%--                    <div class="product-title" style="text-transform: uppercase; font-weight: bold; font-size: large">--%>
-<%--                        <a href="/show-product-details?productid=${product.getProductID()}&buyerid=${buyer.getUserID()}">${product.getProductName()}</a>--%>
-<%--                    </div>--%>
-<%--                    <div class="product-image">--%>
-<%--                        <a href="/show-product-details?productid=${product.getProductID()}&buyerid=${buyer.getUserID()}">--%>
-<%--                            <img style="width: 100px; height: 100px" src="${product.getProductImage()}"--%>
-<%--                                 alt="Product Image">--%>
-<%--                        </a>--%>
-<%--                    </div>--%>
-<%--                    <div class="product-price">--%>
-<%--                        <h3><span>$</span>${product.getProductPrice()}</h3>--%>
-<%--                        <a class="btn"--%>
-<%--                           href="/buy-product?productid=${product.getProductID()}&buyerid=${buyer.getUserID()}">--%>
-<%--                            <i class="fa fa-shopping-cart"></i>Buy Now</a>--%>
-<%--                    </div>--%>
-<%--                </div>--%>
-<%--            </div>--%>
-<%--        </c:forEach>--%>
-<%--    </div>--%>
-<%--</div>--%>
-<%--?????????????????????????????????????????????????????????????????????????????????????--%>
 
 <div class="container">
     <!-- row -->
@@ -226,18 +195,14 @@
                         </div>
                         <div id="slick-nav-1" class="products-slick-nav"></div>
                     </div>
-                    <!-- /tab -->
-                    <%--                    </div>--%>
-                    <%--                </div>--%>
+
                 </div>
-                <!-- Products tab & slick -->
+
             </div>
-            <!-- /row -->
+
         </div>
     </div>
 </div>
-
-
 
 
 <!-- FOOTER -->

@@ -15,7 +15,6 @@ public class IUserDaoImpl implements IUserDao {
     Connection connection = JDBCConnection.getConnection();
     private static final String SELECT_ALL_USERS = "select * from users";
     private static final String SELECT_ALL_BUYERS = "select * from users where userRole = 'buyer'";
-    private static final String SELECT_ALL_BUYERS_LIMIT_10 = "select * from users where userRole = 'buyer' limit 10";
     private static final String FIND_BUYER_BY_ID = "select * from users where userRole = 'buyer' and userID = ?";
     private static final String CREATE_ACCOUNT = "INSERT INTO users ( userEmail, userPass, userRole, phoneNumber,userName) VALUE (?,?,?,?,?)";
     private static final String FIND_BUYER_BY_EMAIL = "select * from users where userRole = 'buyer' and userEmail = ?";
@@ -67,29 +66,6 @@ public class IUserDaoImpl implements IUserDao {
             e.printStackTrace();
         }
         return buyers;
-    }
-
-    @Override
-    public List<User> listBuyerLimit10() {
-        List<User> buyerLimitList = null;
-        try {
-            buyerLimitList = new ArrayList<>();
-            PreparedStatement preparedStatement = connection.prepareStatement(SELECT_ALL_BUYERS_LIMIT_10);
-            ResultSet rs = preparedStatement.executeQuery();
-            while (rs.next()) {
-                int userID = rs.getInt("userID");
-                String userEmail = rs.getString("userEmail");
-                String userPass = rs.getString("userPass");
-                String userRole = rs.getString("userRole");
-                String phoneNumber = rs.getString("phoneNumber");
-                String userName = rs.getString("userName");
-                User buyer = new User(userID, userEmail, userPass, userRole, phoneNumber, userName);
-                buyerLimitList.add(buyer);
-            }
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-        return buyerLimitList;
     }
 
     @Override
